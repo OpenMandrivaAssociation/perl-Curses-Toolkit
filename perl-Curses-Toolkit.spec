@@ -15,19 +15,23 @@ BuildRequires: perl(Curses)
 BuildRequires: perl(Curses::UI)
 BuildRequires: perl(English)
 BuildRequires: perl(File::Find)
+BuildRequires: perl(File::Find::Rule)
 BuildRequires: perl(FindBin)
 BuildRequires: perl(HTML::Parser)
 BuildRequires: perl(List::MoreUtils)
 BuildRequires: perl(List::Util)
 BuildRequires: perl(Moose)
 BuildRequires: perl(MooseX::FollowPBP)
+BuildRequires: perl(MooseX::Has::Sugar)
 BuildRequires: perl(POE)
 BuildRequires: perl(Params::Validate)
+BuildRequires: perl(Path::Class)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Tie::Array::Iterable)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(overload)
 BuildRequires: perl(parent)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
