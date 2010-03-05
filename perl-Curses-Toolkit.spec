@@ -1,5 +1,5 @@
 %define upstream_name    Curses-Toolkit
-%define upstream_version 0.100320
+%define upstream_version 0.100630
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
