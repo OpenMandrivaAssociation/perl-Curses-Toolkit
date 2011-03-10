@@ -1,5 +1,5 @@
 %define upstream_name    Curses-Toolkit
-%define upstream_version 0.100680
+%define upstream_version 0.206
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -14,6 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Curses/%{upstream_name}-%{upst
 BuildRequires: perl(Curses)
 BuildRequires: perl(Curses::UI)
 BuildRequires: perl(English)
+BuildRequires: perl(IO::Pty::Easy)
 BuildRequires: perl(File::Find)
 BuildRequires: perl(File::Find::Rule)
 BuildRequires: perl(FindBin)
