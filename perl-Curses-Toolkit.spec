@@ -32,6 +32,7 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Tie::Array::Iterable)
 BuildRequires: perl(UNIVERSAL::require)
+BuildRequires: perl(aliased)
 BuildRequires: perl(overload)
 BuildRequires: perl(parent)
 
