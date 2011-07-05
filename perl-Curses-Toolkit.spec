@@ -1,9 +1,9 @@
 %define upstream_name    Curses-Toolkit
-%define upstream_version 0.206
+%define upstream_version 0.207
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    An about dialog window
 License:    GPL+ or Artistic
