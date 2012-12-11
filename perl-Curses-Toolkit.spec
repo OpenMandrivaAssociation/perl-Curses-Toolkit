@@ -1,43 +1,43 @@
 %define upstream_name    Curses-Toolkit
 %define upstream_version 0.207
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    An about dialog window
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Curses/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	An about dialog window
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Curses/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Curses)
-BuildRequires: perl(Curses::UI)
-BuildRequires: perl(English)
-BuildRequires: perl(IO::Pty::Easy)
-BuildRequires: perl(File::Find)
-BuildRequires: perl(File::Find::Rule)
-BuildRequires: perl(FindBin)
-BuildRequires: perl(HTML::Parser)
-BuildRequires: perl(List::MoreUtils)
-BuildRequires: perl(List::Util)
-BuildRequires: perl(Moose)
-BuildRequires: perl(MooseX::FollowPBP)
-BuildRequires: perl(MooseX::Has::Sugar)
-BuildRequires: perl(Moose::Meta::Attribute::Custom::Trait::Chained)
-BuildRequires: perl(POE)
-BuildRequires: perl(Params::Validate)
-BuildRequires: perl(Path::Class)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Test::Exception)
-BuildRequires: perl(Tie::Array::Iterable)
-BuildRequires: perl(UNIVERSAL::require)
-BuildRequires: perl(aliased)
-BuildRequires: perl(overload)
-BuildRequires: perl(parent)
+BuildRequires:	perl-devel
+BuildRequires:	perl(Curses)
+BuildRequires:	perl(Curses::UI)
+BuildRequires:	perl(English)
+BuildRequires:	perl(IO::Pty::Easy)
+BuildRequires:	perl(File::Find)
+BuildRequires:	perl(File::Find::Rule)
+BuildRequires:	perl(FindBin)
+BuildRequires:	perl(HTML::Parser)
+BuildRequires:	perl(List::MoreUtils)
+BuildRequires:	perl(List::Util)
+BuildRequires:	perl(Moose)
+BuildRequires:	perl(MooseX::FollowPBP)
+BuildRequires:	perl(MooseX::Has::Sugar)
+BuildRequires:	perl(Moose::Meta::Attribute::Custom::Trait::Chained)
+BuildRequires:	perl(POE)
+BuildRequires:	perl(Params::Validate)
+BuildRequires:	perl(Path::Class)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Exception)
+BuildRequires:	perl(Tie::Array::Iterable)
+BuildRequires:	perl(UNIVERSAL::require)
+BuildRequires:	perl(aliased)
+BuildRequires:	perl(overload)
+BuildRequires:	perl(parent)
 
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildArch:	noarch
 
 %description
 This module tries to be a modern curses toolkit, based on the Curses
@@ -60,24 +60,47 @@ Curses::Toolkit manpage object, which you can call methods on.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes LICENSE META.yml README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
+
+%changelog
+* Tue Jul 05 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.207.0-1mdv2011.0
++ Revision: 688744
+- update to new version 0.207
+
+* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.206.0-2
++ Revision: 657400
+- rebuild for updated spec-helper
+
+* Fri Mar 18 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.206.0-1
++ Revision: 646375
+- new version
+
+* Tue Mar 09 2010 Jérôme Quelin <jquelin@mandriva.org> 0.100.680-1mdv2011.0
++ Revision: 517117
+- update to 0.100680
+
+* Fri Mar 05 2010 Jérôme Quelin <jquelin@mandriva.org> 0.100.630-1mdv2010.1
++ Revision: 514463
+- adding missing buildrequires:
+- adding missing buildrequires:
+- update to 0.100630
+
+* Tue Feb 23 2010 Jérôme Quelin <jquelin@mandriva.org> 0.100.320-1mdv2010.1
++ Revision: 510256
+- import perl-Curses-Toolkit
 
 
+* Tue Feb 23 2010 cpan2dist 0.100320-1mdv
+- initial mdv release, generated with cpan2dist
