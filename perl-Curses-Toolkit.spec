@@ -1,15 +1,15 @@
 %define upstream_name    Curses-Toolkit
-%define upstream_version 0.208
+%define upstream_version 0.211
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.208
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	An about dialog window
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-Toolkit-0.208.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-Toolkit-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Curses)
@@ -104,4 +104,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Tue Feb 23 2010 cpan2dist 0.100320-1mdv
 - initial mdv release, generated with cpan2dist
+
 
