@@ -2,13 +2,13 @@
 %define upstream_version 0.211
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	An about dialog window
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
+Url:		https://metacpan.org/dist/Curses-Toolkit
 Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-Toolkit-%{upstream_version}.tar.gz
 
 BuildRequires:	make
