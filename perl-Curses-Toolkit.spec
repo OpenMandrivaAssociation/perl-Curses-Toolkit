@@ -1,15 +1,13 @@
 %define upstream_name    Curses-Toolkit
-%define upstream_version 0.211
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.211
+Release:	5
 
 Summary:	An about dialog window
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Curses-Toolkit
-Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-Toolkit-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Curses/Curses-Toolkit-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -58,7 +56,7 @@ library. See the example above. the 'spawn' method returns a the
 Curses::Toolkit manpage object, which you can call methods on.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
